@@ -142,7 +142,7 @@ sudo git clone --depth 1 --branch $OE_VERSION https://www.github.com/odoo/odoo $
 
 # --- install requirements odoo 12
 sudo pip3 install wheel
-sudo pip3 intsall -r $OE_HOME_EXT/requirements.txt
+sudo pip3 install -r $OE_HOME_EXT/requirements.txt
 
 if [ $IS_ENTERPRISE = "True" ]; then
     # Odoo Enterprise install!
@@ -155,7 +155,7 @@ if [ $IS_ENTERPRISE = "True" ]; then
     while [[ $GITHUB_RESPONSE == *"Authentication"* ]]; do
         echo "------------------------WARNING------------------------------"
         echo "Your authentication with Github has failed! Please try again."
-        printf "In order to clone and install the Odoo enterprise version you \nneed to be an offical Odoo partner and you need access to\nhttp://github.com/odoo/enterprise.\n"
+        printf "In order to clone and install the Odoo enterprise version you need to be an offical Odoo partner and you need access to\nhttp://github.com/odoo/enterprise.\n"
         echo "TIP: Press ctrl+c to stop this script."
         echo "-------------------------------------------------------------"
         echo " "
